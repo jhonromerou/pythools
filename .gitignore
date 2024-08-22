@@ -1,0 +1,9 @@
+.idea
+pruebas/
+catalog/
+lab/
+
+.env
+*__pycache__
+*.zip
+
