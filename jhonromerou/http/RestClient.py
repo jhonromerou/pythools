@@ -48,11 +48,12 @@ class RestClient:
         return self
 
     def query_params(self, params: dict):
+        self.__query_params = {}
         for key, value in params.items():
             self.__query_params[key] = value
         return self
 
-    def get_response(self, view_url):
+    def get_response(self, view_url=False):
         """Call a request with defined properties
         
         return `<response> Requests.Response`"""
@@ -65,15 +66,15 @@ class RestClient:
         for key in self.__query_params:
             params += '{}={}&'.format(key, self.__query_params[key])
 
-        self.__url = '{}?{}'.format(self.__url, params)
+        url = '{}?{}'.format(self.__url, params) if params != '' else self.__url
 
         if self.__method == 'GET':
-            return requests.get(self.__url, data=self.__data, headers=self.__headers)
+            return requests.get(url, data=self.__data, headers=self.__headers)
 
         if self.__method == 'POST':
-            return requests.post(self.__url, data=self.__data, headers=self.__headers)
+            return requests.post(url, data=self.__data, headers=self.__headers)
         if self.__method == 'PUT':
-            return requests.put(self.__url, data=self.__data, headers=self.__headers)
+            return requests.put(url, data=self.__data, headers=self.__headers)
 
     def get_url_request(self):
         return '{0} {1}'.format(self.__method, self.__url)

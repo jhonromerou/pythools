@@ -1,6 +1,6 @@
 import unittest
 
-from src.persistence.SqlGenerator import SqlGenerator
+from jhonromerou.persistence.SqlGenerator import SqlGenerator
 from test.ReadResources import ReadResources
 
 table = 'table'
@@ -31,4 +31,4 @@ class SqlGeneratorTest(unittest.TestCase):
         query = SqlGenerator.insert(table, fields, [
             {'user': 'jhromero'}])
         expected_query = ReadResources.get_content('sql/insert_1_row.sql')
-        self.assertEqual(expected_query, query)  # add assertion here# ssertion here
+        self.assertEqual(expected_query, query)

@@ -5,7 +5,7 @@
 create and return a file in directory, if directory not exist, then create.
 
 ```python
-from src.filereader.FReaderUtils import FReaderUtils
+from jhonromerou.filereader.FReaderUtils import FReaderUtils
 
 dir_path = 'parent_folder/folder_to_create'
 file_name = 'file_path.txt'
@@ -17,7 +17,7 @@ file_handler = FReaderUtils.create_file_in_dir(dir_path, file_name)
 #### creation with prefix number
 
 ```python
-from src.filereader.FReaderUtils import FReaderUtils
+from jhonromerou.filereader.FReaderUtils import FReaderUtils
 
 dir_path = 'parent_folder/folder_to_create'
 file_name = 'file_path.txt'

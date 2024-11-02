@@ -3,7 +3,7 @@
 ## csv
 
 ```python
-from src.filereader.FReader import FReader
+from jhonromerou.filereader.FReader import FReader
 
 file_name = 'dir/file.csv'
 start_line = 1
@@ -15,7 +15,7 @@ tsv_list_data = FReader.csv(file_name, columns, start_line, end_line)
 ## tsv
 
 ```python
-from src.filereader.FReader import FReader
+from jhonromerou.filereader.FReader import FReader
 
 file_name = 'dir/file.csv'
 start_line = 1
@@ -38,7 +38,7 @@ properties
 read yaml file and return dict with keys
 
 ```python
-from src.filereader.FReader import FReader
+from jhonromerou.filereader.FReader import FReader
 
 ENVS_DICTIONARY = {}
 ymlData = FReader.yaml('file_path.yml', ENVS_DICTIONARY)

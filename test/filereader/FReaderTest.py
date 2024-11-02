@@ -1,6 +1,6 @@
 import unittest
 
-from src.filereader.FReader import FReader
+from jhonromerou.filereader.FReader import FReader
 from test.ReadResources import ReadResources
 
 
